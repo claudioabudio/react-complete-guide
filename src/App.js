@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import ExpenseItem from './components/ExpenseItem';
+import Expenses from './components/Expenses';
 
 function App() {
 
@@ -13,15 +14,7 @@ function App() {
   return (
     <div>
       <h2>Let's get started with react !</h2>
-      <ExpenseItem title={expenses[0].title}
-                    date={expenses[0].date}
-                    amount={expenses[0].amount}/>
-       <ExpenseItem title={expenses[1].title}
-                   date={expenses[1].date}
-                   amount={expenses[1].amount}/>
-       <ExpenseItem title={expenses[2].title}
-                   date={expenses[2].date}
-                   amount={expenses[2].amount}/>
+      <Expenses expenses={expenses}/>
     </div>
   );
 }
