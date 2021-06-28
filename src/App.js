@@ -1,7 +1,7 @@
 import './App.css';
 import Expenses from './components/Expenses/Expenses';
 
-function App() {
+const App = () => {
 
   const expenses = [
     {id: '1', date: new Date(2021,3,1), title: 'Car Insurance', amount: 350},
