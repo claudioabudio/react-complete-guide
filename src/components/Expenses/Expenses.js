@@ -7,12 +7,11 @@ import {useState} from 'react'
 function Expenses(props) {
         const [year, setYear] = useState('2020')
 
-        const [filteredExpenses, setFilteredExpenses] = useState(props.expenses)
+        const filteredExpenses = props.expenses.filter(expense => 
+          expense.date.getFullYear().toString() === year)
 
         const filterExpenseHandler = (year) => {
             setYear(year)
-            setFilteredExpenses(props.expenses.filter(expense => 
-                  expense.date.getFullYear().toString() === year))
           }
 
         return (        
